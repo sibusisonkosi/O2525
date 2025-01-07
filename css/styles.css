@@ -1,0 +1,190 @@
+/* General Styling (Unchanged Sections Omitted) */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+    color: #fff;
+    text-align: center;
+  }
+
+  
+  
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Playlist Styling */
+  .playlist-container {
+    margin: 20px auto;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Envelope Styling (Unchanged) */
+  .envelope {
+    position: relative;
+    width: 60px;
+    height: 40px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  
+  /* 📱 Mobile (up to 600px) */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .playlist-container {
+      width: 90%;
+    }
+  
+    .envelope {
+      width: 50px;
+      height: 30px;
+    }
+  }
+  
+  /* 📊 Tablet (601px - 1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+    }
+  
+    .playlist-container {
+      width: 80%;
+    }
+  }
+  
+  /* 🖥️ Desktop (1025px and above) */
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    .playlist-container {
+      width: 60%;
+    }
+  }
+
+  
+/* I LOVE YOU Section */
+.love-section {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .love-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff3b3b;
+    animation: glow 2s infinite alternate;
+  }
+  
+  .love-message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  /* Glowing Animation */
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff3b3b;
+    }
+    100% {
+      text-shadow: 0 0 20px #ff3b3b, 0 0 30px #ff1e1e;
+    }
+  }
+  
+  /* Floating Hearts Background */
+  @keyframes floatHeart {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(20px);
+      opacity: 0;
+    }
+  }
+  
+  .love-section::before,
+  .love-section::after {
+    content: '❤️';
+    font-size: 1.5rem;
+    position: absolute;
+    animation: floatHeart 5s infinite ease-in-out;
+    opacity: 0.7;
+  }
+  
+  .love-section::before {
+    top: 50%;
+    left: 10%;
+    animation-duration: 6s;
+  }
+  
+  .love-section::after {
+    top: 60%;
+    right: 10%;
+    animation-duration: 8s;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .love-text {
+      font-size: 2rem;
+    }
+  
+    .love-message {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .love-text {
+      font-size: 2.5rem;
+    }
+  
+    .love-message {
+      font-size: 1.1rem;
+    }
+  }
+  
